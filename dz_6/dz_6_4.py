@@ -1,7 +1,8 @@
-n = int(input('ширина треугольника   '))
-a = 1
-i = '*'
-j = ' '
-while a <= n:
-    print(j * (n - a), i * a)
-    a += 1
+height = int(input('ширина треугольника   '))
+width = 1
+while width <= height:
+    print((' ' * (height - width))+('*' * width))
+    width += 1
+
+
+
