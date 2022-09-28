@@ -1,7 +1,6 @@
 import random
 hidden_number = random.randint(1, 10)
-i = 1
-while i <= 3:
+for i in range(1,4):
     number = int(input('попытка #' + str(i)))
     if number > hidden_number:
         print('Много')
@@ -9,7 +8,5 @@ while i <= 3:
         print('Мало')
     else:
         print('Ты угадал')
-        break
-    i += 1
 else:
-    print('Ты не угодал, загадано число', hidden_number)
+    print(f'Ты не угодал, загадано число {hidden_number}')

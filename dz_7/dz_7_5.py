@@ -30,4 +30,4 @@ for c in message:
         encryption += str(c_unicode)
     else:
         encryption += c
-print("шифровка:", encryption)
+print(f'шифровка {encryption}')
