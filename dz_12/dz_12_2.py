@@ -1,18 +1,24 @@
 import json
-A = {'key': [1], 'key1': [True]}
-B = {'key': ['Hello']}
+A = {'key': 1, 'key1': True}
+B = {'key': 'Hello'}
 
-for k, v in B.items():
-    if k in A:
-        A[k].extend(v)
-    else:
-        A[k] = v
-print(A)
+C = {}
+for key in set(list(A.keys()) + list(B.keys())):
+
+    try:
+        C.setdefault(key,[]).append(A[key])
+    except KeyError:
+        pass
+
+    try:
+        C.setdefault(key,[]).append(B[key])
+    except KeyError:
+        pass
+print(C)
+
+json_user = json.dumps(C)
+with open('result.json', 'w') as C:
+    C.write(json_user)
 
 
-json_user = json.dumps(A)
-print(json_user)
-
-with open('result.json', 'w') as A:
-    A.write(json_user)
 
