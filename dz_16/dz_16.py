@@ -24,18 +24,3 @@ print(Vovan.get_info())
 print(Ivanov.call_phone_number())
 print(Sosho.call_phone_number())
 print(Vovan.call_phone_number())
-
-#   def print_id(self):
-#         self.file.write(f'{self.name} - {hex(id(self))}')
-#         print(f'{self.name} - {hex(id(self))}')
-#
-#     def print_hobbies(self):
-#         self.print_id()
-#         print(f'{self.name} likes ')
-#         print('\n'.join(self.hobbies))
-#
-# print(f'Lists: {Person.instance_count}')
-# tom = Person('Tom', 25, 'Tennis, football, TV')
-# bob = Person('Bob', 30, 'YouTube, Music')
-#
-# print(f'Lists: {Person.instance_count}')
