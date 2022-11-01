@@ -10,7 +10,10 @@ for j in range(Y):
     B.append(A)
 print(B)
 
-cols = list(list(row[i] for row in B) for (i, e) in enumerate(B[0]) if
-    i % 2 and B[len(B) - 1][i] < e)
-print(*cols)
+for j, k in enumerate(B):
+    for i, e in enumerate(k):
+        if i % 2 == 0 and B[0][i] > B[(len(B)-1)][i]:
+            print(e, end=' ')
+    print('')
+
 
